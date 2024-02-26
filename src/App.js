@@ -20,7 +20,7 @@ function App() {
 
     try {
       const responseData = await axios.request(options);
-      console.log(responseData.data); // Adicione esta linha para verificar a estrutura dos dados
+      console.log(responseData.data);
       setStandings(responseData.data.response[0].league.standings[0]);
     } catch (error) {
       console.error(error);
@@ -35,7 +35,6 @@ function App() {
       >
         Carregar Standings 2023
       </button>
-      {/* Renderizar a resposta apenas se houver dados */}
       {standings && (
         <div className="mt-4">
           <h2 className="text-xl font-bold mb-2">Standings 2023</h2>
